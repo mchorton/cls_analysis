@@ -1,0 +1,20 @@
+These packages will provide a tool for CLs calculations.  Use
+cls_analysis.py (see its documentation) to run the code.
+
+Overview of files:
+cls_analysis.py: Runs everything.  Has optional flags for input.
+
+StandardHypoTestInvDemo.C: Performs the actual calculations.  Needs a 
+  specially formatted workspace passed to it.
+
+workspace_preparer.C: Prepares this specially formatted workspace.  Uses
+  input histograms as the signal / background / data.
+
+config_reader.C: Helps the workspace_preparer.C read values from a config
+  file that contains physical specifications of the model.
+
+config file: contains declarations of variables such as luminosity, etc.
+
+Other files: The uneven_*.root files contain sample data that the code
+  will run on.  The counting.cfg file is currently set up for this data.
+  The run.sh file shows how the sample code can be run.
